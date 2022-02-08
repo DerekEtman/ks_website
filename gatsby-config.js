@@ -1,3 +1,8 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+console.log(process.env.NODE_ENV)
 module.exports = {
   siteMetadata: {
       title: `KS_1`,
@@ -6,8 +11,8 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": "CFPAT-KJUl267vCUNHM--o6HQkUBEOQUKuFqDmKz2lLMsfkzo",
-      "spaceId": ""
+      "accessToken": process.env.CONTENTFUL_DELIVERY_API_TOKEN,
+      "spaceId": process.env.CONTENTFUL_SPACE_ID
     }
   }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
