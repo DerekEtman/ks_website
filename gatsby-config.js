@@ -5,8 +5,35 @@ require("dotenv").config({
 console.log(process.env.NODE_ENV)
 module.exports = {
   siteMetadata: {
-      title: `KS_1`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `KS_1`,
+    siteUrl: `https://www.yourdomain.tld`,
+    menuLinks:[
+      {
+        name:'home',
+        link:'/'
+      },
+      {
+        name:'about',
+        link:'/about'
+      },
+      {
+        name:'shows',
+        link:'/shows'
+      },
+      {
+        name:'music',
+        link:'/music'
+      },
+      {
+        name:'videos',
+        link:'/videos'
+      },
+      {
+        name:'contact',
+        link:'/contact'
+      },
+    ]
+
   },
   plugins: [{
     resolve: 'gatsby-source-contentful',

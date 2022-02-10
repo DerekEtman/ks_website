@@ -28,13 +28,14 @@ const Splash = () =>{
 
   let data = JSON.stringify(dataQuery,null,4)
 
-  console.log("Data", data)
+  console.log("Data", data.details)
   return(
       <div>
         <img src=""></img>
           <h2>
           Hello there            
           </h2>
+          {data}
       </div>
   )
 }
