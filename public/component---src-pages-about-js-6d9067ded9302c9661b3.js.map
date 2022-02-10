@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-js-6d9067ded9302c9661b3.js","mappings":"sHAaA,UAVc,WACV,OACI","sources":["webpack://ks_1/./src/pages/About.js"],"sourcesContent":["import React from \"react\";\n\n\nconst About = () => {\n    return(\n        <>\n            about\n        </>\n    )\n}\n\n\n\nexport default About;"],"names":[],"sourceRoot":""}
