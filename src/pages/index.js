@@ -1,13 +1,8 @@
 import * as React from "react"
-import Splash from "../components/Splash_1"
-
+import Splash from "../components/Splash"
 import DefaultLayout from "../layouts/DefaultLayout";
 
-const pageStyles= {
-  backgroundColor:"Green"
-}
 
-// markup
 const IndexPage = () => {
   return (
     <main>
@@ -15,8 +10,6 @@ const IndexPage = () => {
       <DefaultLayout>
         <Splash />
       </DefaultLayout>
-
-      
     </main>
   )
 }

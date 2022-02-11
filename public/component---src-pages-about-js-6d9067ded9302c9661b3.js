@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkks_1=self.webpackChunkks_1||[]).push([[682],{1668:function(e,n,t){t.r(n);var u=t(7294);n.default=function(){return u.createElement(u.Fragment,null,"about")}}}]);
-//# sourceMappingURL=component---src-pages-about-js-6d9067ded9302c9661b3.js.map

@@ -2,7 +2,6 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-console.log(process.env.NODE_ENV)
 module.exports = {
   siteMetadata: {
     title: `KS_1`,
@@ -14,23 +13,23 @@ module.exports = {
       },
       {
         name:'about',
-        link:'/about'
+        link:'/About'
       },
       {
         name:'shows',
-        link:'/shows'
+        link:'/Shows'
       },
       {
         name:'music',
-        link:'/music'
+        link:'/Music'
       },
       {
         name:'videos',
-        link:'/videos'
+        link:'/Videos'
       },
       {
         name:'contact',
-        link:'/contact'
+        link:'/Contact'
       },
     ]
 
@@ -60,5 +59,5 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
-  }]
+  },]
 };
