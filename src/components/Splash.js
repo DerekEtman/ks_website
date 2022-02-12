@@ -4,7 +4,7 @@ const { useStaticQuery, graphql } = require("gatsby");
 const Splash = () => {
   const {
     allContentfulSplashPage:{
-      nodes:[splashPageContent]
+      nodes:[splashContent]
     }
   } = useStaticQuery(graphql`
     {
@@ -26,11 +26,18 @@ const Splash = () => {
       }
     }
   `);
- const [splashSectionTitle, splashBackground, splashSectionDesc] = splashPageContent
 
- console.log(splashSectionTitle)
+  const {splashBackground, splashSectionDesc, splashSectionTitle} = splashContent
+  let descTest = JSON.stringify(splashSectionDesc.raw,null,4)
+  console.log(splashBackground, descTest)
+
+  
   return (
     <div>
+      {splashSectionTitle}
+      <p>
+        {descTest}
+      </p>
     </div>
   );
 };

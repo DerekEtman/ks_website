@@ -1,21 +1,23 @@
-import React from "react"
-import NavBar from "../components/nav/NavBar"
+import React from "react";
+import Footer from "../components/footer/Footer";
+import NavBar from "../components/nav/NavBar";
+import "./DefaultLayout.css"
 
-const DefaultLayout = ({children}) => {
 
-    return(
-        <div>
-            <header>
-                <NavBar />
-            </header>
-
-            {children}
-
-            <footer>
-                footer
-            </footer>
-        </div>
-    )
+const main = {
+    minHeight:'85vh',
 }
 
-export default DefaultLayout
+const DefaultLayout = ({ children }) => {
+  return (
+    <div>
+      <NavBar />
+
+      <main style={main}>{children}</main>
+
+      <Footer />
+    </div>
+  );
+};
+
+export default DefaultLayout;

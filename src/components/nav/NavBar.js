@@ -62,33 +62,35 @@ const NavBar = () => {
   `);
 
   return (
-    <AppBar position="static" color="transparent" elevation={0}>
-      <Toolbar varient="dense">
-        <Typography sx={{ flexGrow: 1 }}>Kris Simeon</Typography>
-        <IconButton
-          size="large"
-          edge="end"
-          color="inherit"
-          aria-label="menu"
-          onClick={handleClick}
-        >
-          <MenuIcon />
-        </IconButton>
-      </Toolbar>
+    <header>
+      <AppBar position="static" color="transparent" elevation={0}>
+        <Toolbar varient="dense">
+          <Typography variant="h3" sx={{ flexGrow: 1 }}>Kris Simeon</Typography>
+          <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="menu"
+            onClick={handleClick}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
 
-      <Drawer anchor="top" open={navAnchor} onClose={handleClose}>
-        {DrawerNav(menuLinks)}
+        <Drawer anchor="top" open={navAnchor} onClose={handleClose}>
+          {DrawerNav(menuLinks)}
 
-        <IconButton
-          size="large"
-          color="inherit"
-          aria-label="close menu"
-          onClick={handleClose}
-        >
-          <CloseIcon />
-        </IconButton>
-      </Drawer>
-    </AppBar>
+          <IconButton
+            size="large"
+            color="inherit"
+            aria-label="close menu"
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
+        </Drawer>
+      </AppBar>
+    </header>
   );
 };
 

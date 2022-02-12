@@ -37,8 +37,9 @@ module.exports = {
   plugins: [{
     resolve: 'gatsby-source-contentful',
     options: {
-      "accessToken": process.env.CONTENTFUL_DELIVERY_API_TOKEN,
-      "spaceId": process.env.CONTENTFUL_SPACE_ID
+      "accessToken": process.env.CONTENTFUL_PREVIEW_API_TOKEN,
+      "spaceId": process.env.CONTENTFUL_SPACE_ID,
+      "host":`preview.contentful.com`
     }
   }, "gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: 'gatsby-plugin-manifest',
