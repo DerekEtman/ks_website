@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Drawer,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -16,17 +17,27 @@ import React, { useState } from "react";
 
 const DrawerNav = (props) => {
   return (
+    // <Grid container>
+    // <Grid item xs={0} md={6}>
+    // </Grid>
+    // <Grid item xs={12} md={6}>
     <List>
       {props.map((linkItem) => {
         return (
           <div key={linkItem.name}>
-            <ListItemButton component={Link} to={linkItem.link}>
+            <ListItemButton
+              component={Link}
+              to={linkItem.link}
+              alignItems={"center"}
+            >
               <ListItemText primary={linkItem.name.toUpperCase()} />
             </ListItemButton>
           </div>
         );
       })}
     </List>
+    // </Grid>
+    // </Grid>
   );
 };
 
@@ -65,7 +76,9 @@ const NavBar = () => {
     <header>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar varient="dense">
-          <Typography variant="h3" sx={{ flexGrow: 1 }}>Kris Simeon</Typography>
+          <Typography variant="h3" sx={{ flexGrow: 1 }}>
+            Kris Simeon
+          </Typography>
           <IconButton
             size="large"
             edge="end"
@@ -78,16 +91,16 @@ const NavBar = () => {
         </Toolbar>
 
         <Drawer anchor="top" open={navAnchor} onClose={handleClose}>
-          {DrawerNav(menuLinks)}
+            {DrawerNav(menuLinks)}
 
-          <IconButton
-            size="large"
-            color="inherit"
-            aria-label="close menu"
-            onClick={handleClose}
-          >
-            <CloseIcon />
-          </IconButton>
+            <IconButton
+              size="large"
+              color="inherit"
+              aria-label="close menu"
+              onClick={handleClose}
+            >
+              <CloseIcon />
+            </IconButton>
         </Drawer>
       </AppBar>
     </header>

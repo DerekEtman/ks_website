@@ -1,11 +1,23 @@
 import React from "react";
-const { useStaticQuery, graphql } = require("gatsby");
+import { useStaticQuery, graphql } from "gatsby";
+import { Grid } from "@mui/material";
+
+
+// STYLES
+const imageWrapper = {
+  // border:"1px solid red"
+}
+
+const leftBoxWrapper = {
+  // border:"1px solid blue"
+
+}
 
 const Splash = () => {
   const {
-    allContentfulSplashPage:{
-      nodes:[splashContent]
-    }
+    allContentfulSplashPage: {
+      nodes: [splashContent],
+    },
   } = useStaticQuery(graphql`
     {
       allContentfulSplashPage {
@@ -27,18 +39,23 @@ const Splash = () => {
     }
   `);
 
-  const {splashBackground, splashSectionDesc, splashSectionTitle} = splashContent
-  let descTest = JSON.stringify(splashSectionDesc.raw,null,4)
-  console.log(splashBackground, descTest)
+  const { splashBackground, splashSectionDesc, splashSectionTitle } =
+    splashContent;
+  const { description, file } = splashBackground;
+  let descTest = JSON.stringify(splashSectionDesc.raw, null, 4);
+  console.log(splashBackground);
 
-  
   return (
-    <div>
-      {splashSectionTitle}
-      <p>
-        {descTest}
-      </p>
-    </div>
+    <Grid container>
+      <Grid item xs={0} md={7} style={leftBoxWrapper}>hello</Grid>
+      <Grid item xs={12}  md={5} style={imageWrapper}>
+        <img
+          src={file.url}
+          alt={description}
+          width={"100%"}
+        />
+      </Grid>
+    </Grid>
   );
 };
 
