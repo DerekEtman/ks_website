@@ -76,9 +76,11 @@ const NavBar = () => {
     <header>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar varient="dense">
-          <Typography variant="h3" sx={{ flexGrow: 1 }}>
-            Kris Simeon
-          </Typography>
+          <ListItemButton component={Link} to={"/"} >
+            <Typography variant="h3" sx={{ flexGrow: 1 }}>
+              Kris Simeon
+            </Typography>
+          </ListItemButton>
           <IconButton
             size="large"
             edge="end"
@@ -91,16 +93,16 @@ const NavBar = () => {
         </Toolbar>
 
         <Drawer anchor="top" open={navAnchor} onClose={handleClose}>
-            {DrawerNav(menuLinks)}
+          {DrawerNav(menuLinks)}
 
-            <IconButton
-              size="large"
-              color="inherit"
-              aria-label="close menu"
-              onClick={handleClose}
-            >
-              <CloseIcon />
-            </IconButton>
+          <IconButton
+            size="large"
+            color="inherit"
+            aria-label="close menu"
+            onClick={handleClose}
+          >
+            <CloseIcon />
+          </IconButton>
         </Drawer>
       </AppBar>
     </header>

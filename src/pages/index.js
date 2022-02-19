@@ -1,21 +1,27 @@
+import { createTheme, ThemeProvider } from "@mui/material";
 import { fontFamily } from "@mui/system";
-import * as React from "react"
-import Splash from "../components/Splash"
+import React from "react";
+import Splash from "../components/Splash";
 import DefaultLayout from "../layouts/DefaultLayout";
 
-const globalStyle = {
-  fontFamily:'antic'
-}
+
+const globalTheme = createTheme({
+  typography:{
+    fontFamily: 'Antic, sans-serif',
+  }
+})
 
 const IndexPage = () => {
   return (
-    <main style={globalStyle}>
-      <title>Home Page</title>
-      <DefaultLayout>
-        <Splash />
-      </DefaultLayout>
-    </main>
-  )
-}
+    <ThemeProvider theme={globalTheme}>
+      <main >
+        <title>Home Page</title>
+        <DefaultLayout>
+          <Splash />
+        </DefaultLayout>
+      </main>
+    </ThemeProvider>
+  );
+};
 
-export default IndexPage
+export default IndexPage;
