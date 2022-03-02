@@ -18,10 +18,15 @@ const splashTitle = {
 };
 
 const splashContainer = {
-  paddingTop: "20%",
+  minHeight:"80vh",
+  // border:"1px solid black",
+  paddingTop: "20vh",
+  backgroundSize:"contain",
+  backgroundRepeat:"no-repeat",
+  backgroundPosition:"right bottom",
 };
 
-const Splash = () => {
+export default function Splash(props){
   const {
     allContentfulSplashPage: {
       nodes: [splashContent],
@@ -52,10 +57,10 @@ const Splash = () => {
     splashContent;
   const { description, file } = splashBackground;
   let descTest = JSON.stringify(splashSectionDesc.raw, null, 4);
-  console.log(header);
+  console.log(file);
 
   return (
-    <Grid container sx={({ backgroundImage: `${file.url}` }, splashContainer)}>
+    <Grid container style={{backgroundImage:`url(${file.url})`}} sx={splashContainer}>
       <Grid item xs={12} md={10} style={leftBoxWrapper}>
         <Box sx={mainTitleContainer}>
           <Typography variant="h1" sx={splashTitle}>
@@ -77,5 +82,3 @@ const Splash = () => {
     </Grid>
   );
 };
-
-export default Splash;

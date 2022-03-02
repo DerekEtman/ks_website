@@ -41,7 +41,7 @@ const DrawerNav = (props) => {
   );
 };
 
-const NavBar = (props) => {
+export default function NavBar({location}) {
   const [navAnchor, setNavAnchor] = useState(false);
   //   const open = Boolean(navAnchor);
 
@@ -71,27 +71,23 @@ const NavBar = (props) => {
       }
     }
   `);
-  console.log(props)
 
-  const {location} = props;
-  const pathname = location?.pathname
+  const pathname = location?.pathname;
+  console.log(pathname)
 
   return (
     <header>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar varient="dense">
+          <ListItemButton component={Link} to={"/"}>
 
-          {/* {if(location.path == "/")(
-            return(
+            {/* {pathname === "/" && ( */}
+              <Typography variant="h3" sx={{ flexGrow: 1, fontWeight: 800 }}>
+                Kris Simeon
+              </Typography>
+            {/* )} */}
 
-            )
-          )} */}
-          <ListItemButton component={Link} to={"/"} >
-            <Typography variant="h3" sx={{ flexGrow: 1, fontWeight:800, }}>
-              Kris Simeon
-            </Typography>
           </ListItemButton>
-
 
           <IconButton
             size="large"
@@ -119,6 +115,4 @@ const NavBar = (props) => {
       </AppBar>
     </header>
   );
-};
-
-export default NavBar;
+}
