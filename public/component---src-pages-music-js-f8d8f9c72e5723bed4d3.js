@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkks_1=self.webpackChunkks_1||[]).push([[610],{7525:function(e,u,n){n.r(u);var s=n(7294),t=n(1109);u.default=function(){return s.createElement(t.Z,null,'"Music Page"')}}}]);
-//# sourceMappingURL=component---src-pages-music-js-f8d8f9c72e5723bed4d3.js.map

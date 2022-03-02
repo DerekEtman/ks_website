@@ -41,7 +41,7 @@ const DrawerNav = (props) => {
   );
 };
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [navAnchor, setNavAnchor] = useState(false);
   //   const open = Boolean(navAnchor);
 
@@ -71,16 +71,28 @@ const NavBar = () => {
       }
     }
   `);
+  console.log(props)
+
+  const {location} = props;
+  const pathname = location?.pathname
 
   return (
     <header>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar varient="dense">
+
+          {/* {if(location.path == "/")(
+            return(
+
+            )
+          )} */}
           <ListItemButton component={Link} to={"/"} >
-            <Typography variant="h3" sx={{ flexGrow: 1 }}>
+            <Typography variant="h3" sx={{ flexGrow: 1, fontWeight:800, }}>
               Kris Simeon
             </Typography>
           </ListItemButton>
+
+
           <IconButton
             size="large"
             edge="end"
