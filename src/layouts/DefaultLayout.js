@@ -1,22 +1,27 @@
+import { createTheme, ThemeProvider } from "@mui/material";
 import React from "react";
 import Footer from "../components/footer/Footer";
 import NavBar from "../components/nav/NavBar";
-import "./DefaultLayout.css"
 
+const globalTheme = createTheme({
+  typography: {
+    fontFamily: "Antic, sans-serif",
+  },
+});
 
 const main = {
-    minHeight:'85vh',
-}
+  minHeight: "85vh",
+};
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div>
+    <ThemeProvider theme={globalTheme}>
       <NavBar />
 
       <main style={main}>{children}</main>
 
       <Footer />
-    </div>
+    </ThemeProvider>
   );
 };
 

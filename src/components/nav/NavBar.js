@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import {
   AppBar,
   Drawer,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -16,21 +17,31 @@ import React, { useState } from "react";
 
 const DrawerNav = (props) => {
   return (
+    // <Grid container>
+    // <Grid item xs={0} md={6}>
+    // </Grid>
+    // <Grid item xs={12} md={6}>
     <List>
       {props.map((linkItem) => {
         return (
           <div key={linkItem.name}>
-            <ListItemButton component={Link} to={linkItem.link}>
+            <ListItemButton
+              component={Link}
+              to={linkItem.link}
+              alignItems={"center"}
+            >
               <ListItemText primary={linkItem.name.toUpperCase()} />
             </ListItemButton>
           </div>
         );
       })}
     </List>
+    // </Grid>
+    // </Grid>
   );
 };
 
-const NavBar = () => {
+export default function NavBar({location}) {
   const [navAnchor, setNavAnchor] = useState(false);
   //   const open = Boolean(navAnchor);
 
@@ -61,11 +72,23 @@ const NavBar = () => {
     }
   `);
 
+  const pathname = location?.pathname;
+  console.log(pathname)
+
   return (
     <header>
       <AppBar position="static" color="transparent" elevation={0}>
         <Toolbar varient="dense">
-          <Typography variant="h3" sx={{ flexGrow: 1 }}>Kris Simeon</Typography>
+          <ListItemButton component={Link} to={"/"}>
+
+            {/* {pathname === "/" && ( */}
+              <Typography variant="h3" sx={{ flexGrow: 1, fontWeight: 800 }}>
+                Kris Simeon
+              </Typography>
+            {/* )} */}
+
+          </ListItemButton>
+
           <IconButton
             size="large"
             edge="end"
@@ -92,6 +115,4 @@ const NavBar = () => {
       </AppBar>
     </header>
   );
-};
-
-export default NavBar;
+}

@@ -4,7 +4,7 @@ import DefaultLayout from '../layouts/DefaultLayout';
 const Shows = () => {
     return(
         <DefaultLayout>
-            "The show Page"
+            <iframe src='https://bnds.us/9g4ib9' width={"100%"} height={"100%"}></iframe>
         </DefaultLayout>
     )
 }
