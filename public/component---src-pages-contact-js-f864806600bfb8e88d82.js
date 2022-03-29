@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkks_1=self.webpackChunkks_1||[]).push([[501],{7167:function(e,t,r){r.r(t);var s=r(7294),n=r(6507),u={};t.default=function(){return s.createElement(n.Z,null,s.createElement("iframe",{id:"jotFormIframe",style:u,width:"100%",height:"100%",src:"https://form.jotform.us/71770480881159"}))}}}]);
-//# sourceMappingURL=component---src-pages-contact-js-f864806600bfb8e88d82.js.map
