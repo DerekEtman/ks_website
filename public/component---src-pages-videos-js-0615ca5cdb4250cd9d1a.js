@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkks_1=self.webpackChunkks_1||[]).push([[58],{9691:function(e,n,u){u.r(n);var t=u(7294),s=u(6507);n.default=function(){return t.createElement(s.Z,null,'"Video page"')}}}]);
-//# sourceMappingURL=component---src-pages-videos-js-0615ca5cdb4250cd9d1a.js.map
