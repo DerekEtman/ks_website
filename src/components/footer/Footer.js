@@ -3,6 +3,7 @@ import React from "react";
 
 const footerContainer = {
   minHeight: "5vh",
+  padding:"0 24px"
 };
 
 const copyrightText = {
