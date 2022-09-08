@@ -11,6 +11,7 @@ const globalTheme = createTheme({
 
 const main = {
   minHeight: "85vh",
+  margin: "3rem auto",
 };
 
 const DefaultLayout = ({ children }) => {

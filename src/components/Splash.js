@@ -18,15 +18,15 @@ const splashTitle = {
 };
 
 const splashContainer = {
-  minHeight:"80vh",
+  minHeight: "80vh",
   // border:"1px solid black",
   paddingTop: "20vh",
-  backgroundSize:"contain",
-  backgroundRepeat:"no-repeat",
-  backgroundPosition:"right bottom",
+  backgroundSize: "contain",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "right bottom",
 };
 
-export default function Splash(props){
+export default function Splash(props) {
   const {
     allContentfulSplashPage: {
       nodes: [splashContent],
@@ -60,7 +60,11 @@ export default function Splash(props){
   console.log(file);
 
   return (
-    <Grid container style={{backgroundImage:`url(${file.url})`}} sx={splashContainer}>
+    <Grid
+      container
+      style={{ backgroundImage: `url(${file.url})` }}
+      sx={splashContainer}
+    >
       <Grid item xs={12} md={10} style={leftBoxWrapper}>
         <Box sx={mainTitleContainer}>
           <Typography variant="h1" sx={splashTitle}>
@@ -81,4 +85,4 @@ export default function Splash(props){
       </Grid> */}
     </Grid>
   );
-};
+}

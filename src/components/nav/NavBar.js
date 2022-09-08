@@ -73,7 +73,6 @@ export default function NavBar({location}) {
   `);
 
   const pathname = location?.pathname;
-  console.log(pathname)
 
   return (
     <header>
