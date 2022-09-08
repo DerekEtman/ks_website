@@ -1,7 +1,7 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { Container, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import { graphql, useStaticQuery } from "gatsby";
+import React from "react";
 
 // STYLES
 
@@ -57,7 +57,6 @@ export default function Splash(props) {
     splashContent;
   const { description, file } = splashBackground;
   let descTest = JSON.stringify(splashSectionDesc.raw, null, 4);
-  console.log(file);
 
   return (
     <Grid
