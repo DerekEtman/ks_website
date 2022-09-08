@@ -1,4 +1,4 @@
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+// import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import {
   Grid, ImageList,
   ImageListItem, Typography
@@ -33,35 +33,35 @@ const PhotoMasonry = (photoBulkArray) => {
   );
 };
 
-const useRenderRichText = (rawText) => {
-  const Bold = ({ children }) => <span className="bold">{children}</span>;
-  const Text = ({ children }) => <p className="align-center">{children}</p>;
+// const useRenderRichText = (rawText) => {
+//   const Bold = ({ children }) => <span className="bold">{children}</span>;
+//   const Text = ({ children }) => <p className="align-center">{children}</p>;
 
-  const options = {
-    renderMark: {
-      [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
-    },
-    renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-      [BLOCKS.EMBEDDED_ASSET]: (node) => {
-        return (
-          <>
-            <h2>Embedded Asset</h2>
-            <pre>
-              <code>{JSON.stringify(node, null, 2)}</code>
-            </pre>
-          </>
-        );
-      },
-    },
-  };
+//   const options = {
+//     renderMark: {
+//       [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+//     },
+//     renderNode: {
+//       [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+//       [BLOCKS.EMBEDDED_ASSET]: (node) => {
+//         return (
+//           <>
+//             <h2>Embedded Asset</h2>
+//             <pre>
+//               <code>{JSON.stringify(node, null, 2)}</code>
+//             </pre>
+//           </>
+//         );
+//       },
+//     },
+//   };
 
-  // let test = renderRichText(testSomething, options);
+//   // let test = renderRichText(testSomething, options);
 
-  // console.log("RawTExt:", test)
+//   // console.log("RawTExt:", test)
 
-  // return test;
-};
+//   // return test;
+// };
 
 const About = () => {
   const {
