@@ -20,14 +20,14 @@ const Footer = () => {
   return (
     <footer style={footerContainer}>
       <Grid container spacing={2}>
-        <Grid item xs={10} style={copyrightText}>
+        <Grid item xs={8} sm={10} style={copyrightText}>
           <Typography variant="p">
             ©{currentYear} Kris Simeon. All rights reserved.
           </Typography>
         </Grid>
-        <Grid item xs />
+        <Grid item sm display={{xs:"none"}} />
 
-        <Grid item xs={1}>
+        <Grid item xs={4} md={1}>
           <Link
             href="https://www.facebook.com/krissimeonmusic/"
             target="_blank"
