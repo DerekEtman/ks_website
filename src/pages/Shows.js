@@ -23,7 +23,7 @@ const Shows = () => {
   return (
     <DefaultLayout>
       <div style={iframeContainer}>
-        <iframe src="" width={"100%"} id="showIframe" />
+        <iframe src="" width={"100%"} id="showIframe" title="Bands In Town - Kris Simeon Shows" />
       </div>
     </DefaultLayout>
   );
